@@ -1,8 +1,8 @@
 package br.com.duxus.controller;
 
 import br.com.duxus.controller.dto.TimeDTO;
-import br.com.duxus.model.Time;
-import br.com.duxus.service.*;
+import br.com.duxus.domain.Time;
+import br.com.duxus.service.time.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/times")
-public class TimeController {
+public class gitbTimeController {
 
     @Autowired
     private AtualizaTimeService atualizaTimeService;

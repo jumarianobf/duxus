@@ -1,4 +1,4 @@
-package br.com.duxus.model;
+package br.com.duxus.domain;
 
 
 import jakarta.persistence.*;
