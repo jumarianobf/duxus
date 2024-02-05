@@ -48,16 +48,4 @@ public class Integrante {
 		return Objects.hash(id, franquia, nome, funcao);
 	}
 
-
-
-
-//	public String integranteMaisUsado(LocalDate dataInicial, LocalDate dataFinal) {
-//		List<Time> times = getTimes(dataInicial, dataFinal);
-//		Map<String, Integer> contagem = new HashMap<>();
-//		for (Time time : times) {
-//			for (Integrante integrante : time.getIntegrantes()) {
-//				contagem.put(String.valueOf(integrante), contagem.getOrDefault(integrante, 0) + 1);
-//			}
-//		}
-//	}
 }
