@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/times")
-public class gitbTimeController {
+public class TimeController {
 
     @Autowired
     private AtualizaTimeService atualizaTimeService;
