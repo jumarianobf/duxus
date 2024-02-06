@@ -20,9 +20,11 @@ public class ComposicaoTime {
 	private long id;
 	
 	@ManyToOne
+	@JoinColumn(name = "id_time")
 	private Time time;
 
 	@ManyToOne
+	@JoinColumn(name = "id_integrante")
 	private Integrante integrante;
 
 	@Override
