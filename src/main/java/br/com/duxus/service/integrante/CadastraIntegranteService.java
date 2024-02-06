@@ -25,3 +25,6 @@ public class CadastraIntegranteService {
                 .build();
     }
 }
+
+
+

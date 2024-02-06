@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -25,18 +26,17 @@ public class Time {
     private LocalDate data;
 	
 
-//	@OneToMany(targetEntity=ComposicaoTime.class, mappedBy = "time", cascade = CascadeType.ALL)
-//	private List<ComposicaoTime> composicaoTime;
+	@OneToMany(targetEntity=ComposicaoTime.class, mappedBy = "time", cascade = CascadeType.ALL)
+	private List<ComposicaoTime> composicaoTime;
 
 //	public Time(List<Integrante> integrantes) {
 //		this.integrantes = integrantes;
 //	}
-
+//
 //	public Time(LocalDate data, List<ComposicaoTime> composicaoTime) {
 //		this.data = data;
 //		this.composicaoTime = composicaoTime;
 //	}
-
 
 
 	@Override
@@ -51,4 +51,6 @@ public class Time {
 	public final int hashCode() {
 		return Objects.hash(id, data);
 	}
+
+
 }

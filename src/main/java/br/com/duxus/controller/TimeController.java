@@ -25,6 +25,7 @@ public class TimeController {
     @Autowired
     private CadastraTimeService cadastraTimeService;
 
+
     @PostMapping
     public void cadastrar(@RequestBody @Valid TimeDTO time) {
         cadastraTimeService.executar(time);
@@ -49,4 +50,7 @@ public class TimeController {
     public void excluir(@PathVariable Long id) {
         deletaTimeService.executar(id);
     }
+
 }
+
+

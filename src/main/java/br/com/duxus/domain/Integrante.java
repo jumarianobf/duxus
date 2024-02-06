@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Builder
@@ -31,9 +32,8 @@ public class Integrante {
 	@Column
 	private String funcao;
 
-//	@OneToMany(targetEntity=ComposicaoTime.class, mappedBy = "integrante")
-//	private List<ComposicaoTime> composicaoTime;
-
+	@OneToMany(targetEntity=ComposicaoTime.class, mappedBy = "integrante")
+	private List<ComposicaoTime> composicaoTime;
 
 	@Override
 	public boolean equals(Object o) {
@@ -47,5 +47,6 @@ public class Integrante {
 	public int hashCode() {
 		return Objects.hash(id, franquia, nome, funcao);
 	}
+
 
 }
