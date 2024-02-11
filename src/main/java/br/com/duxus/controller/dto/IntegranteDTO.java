@@ -5,14 +5,10 @@ import lombok.Data;
 
 @Data
 public class IntegranteDTO {
-
-
     @NotEmpty
     private String franquia;
-
     @NotEmpty
     private String nome;
-
     @NotEmpty
     private String funcao;
 }

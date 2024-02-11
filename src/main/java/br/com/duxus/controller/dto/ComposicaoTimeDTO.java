@@ -7,9 +7,10 @@ import lombok.Data;
 @Data
 public class ComposicaoTimeDTO {
 
-    private Time time;
 
-    private Integrante integrante;
+    private long idTime;
+
+    private long idIntegrante;
 
     }
 

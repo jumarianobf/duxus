@@ -15,8 +15,6 @@ public class AtualizaComposicaoTimeService {
         public ComposicaoTime executar(Long id, ComposicaoTimeDTO request) {
             var composicaoTime = composicaoTimeRepository.findById(id)
                     .orElseThrow(() -> new RuntimeException("Composicao de time não encontrado"));
-            composicaoTime.setTime(request.getTime());
-            composicaoTime.setIntegrante(request.getIntegrante());
-            return composicaoTimeRepository.save(composicaoTime);
+            return null;
         }
 }

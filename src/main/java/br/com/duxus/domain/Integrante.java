@@ -32,8 +32,15 @@ public class Integrante {
 	@Column
 	private String funcao;
 
-	@OneToMany(targetEntity=ComposicaoTime.class, mappedBy = "integrante")
-	private List<ComposicaoTime> composicaoTime;
+
+
+
+
+
+//	public void addComposicao(ComposicaoTime composicao) {
+//		this.composicaoTime.add(composicao);
+//		composicao.setIntegrante(this);
+//	}
 
 	@Override
 	public boolean equals(Object o) {
@@ -47,6 +54,8 @@ public class Integrante {
 	public int hashCode() {
 		return Objects.hash(id, franquia, nome, funcao);
 	}
+
+
 
 
 }

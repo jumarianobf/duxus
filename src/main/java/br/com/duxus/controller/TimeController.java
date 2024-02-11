@@ -2,13 +2,20 @@ package br.com.duxus.controller;
 
 import br.com.duxus.controller.dto.TimeDTO;
 import br.com.duxus.domain.Time;
+import br.com.duxus.service.apiService.TimeDaDataService;
 import br.com.duxus.service.time.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 @RequestMapping("/times")

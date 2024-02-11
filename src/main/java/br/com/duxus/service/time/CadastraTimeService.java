@@ -13,6 +13,8 @@ public class CadastraTimeService {
         private TimeRepository timeRepository;
 
         public Time executar(TimeDTO request) {
+            timeRepository.findByData(request.getData())
+                    .ifPresent(time-> {throw new RuntimeException("Data já cadastrada.");});
             return timeRepository.save(getTime(request));
         }
 

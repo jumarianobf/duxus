@@ -8,9 +8,7 @@ import java.time.LocalDate;
 
 @Data
 public class TimeDTO {
-
-
     @NotNull
-    @JsonFormat(pattern="dd/MM/yyyy")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate data;
 }

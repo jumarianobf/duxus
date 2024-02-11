@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
 
 
@@ -24,10 +23,7 @@ public class Time {
 
 	@Column
     private LocalDate data;
-	
 
-	@OneToMany(targetEntity=ComposicaoTime.class, mappedBy = "time", cascade = CascadeType.ALL)
-	private List<ComposicaoTime> composicaoTime;
 
 //	public Time(List<Integrante> integrantes) {
 //		this.integrantes = integrantes;
@@ -37,7 +33,6 @@ public class Time {
 //		this.data = data;
 //		this.composicaoTime = composicaoTime;
 //	}
-
 
 	@Override
 	public final boolean equals(Object o) {
